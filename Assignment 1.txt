@@ -1,0 +1,241 @@
+To find out given number is even or odd-
+
+Class Evenorodd{
+public static void main (String[] args){
+Scanner s=new Scanner(System.in);
+System.out.print("Enter a number");
+int num=s.nextInt();
+if(num%2==0)
+System.out.println("number is even");
+else
+System.out.println("number is odd");
+}
+} 
+///////////////////////////////////////////////////////////
+To find factorial of given number-
+public class Factorial {
+
+    public static void main(String[] args) {
+
+        int num = 10;
+        long factorial = 1;
+        for(int i = 1; i <= num; ++i)
+        {
+             factorial = factorial * i; //1*2*3*4*5*6*7*8*9
+           
+        }
+      System.out.println("Factorial is"+factorial);
+    }
+}
+/////////////////////////////////////////////////////////////
+Factorial of number using recursion-
+
+public class Factorial {
+
+    public static void main(String[] args) {
+        int num = 6;
+        long factorial = multiplyNumbers(num);
+        System.out.println("Factorial of " + num + " = " + factorial);
+    }
+    public static long multiplyNumbers(int num)
+    {
+        if (num >= 1)
+            return num * multiplyNumbers(num - 1);
+        else
+            return 1;
+    }
+}
+////////////////////////////////////////////////////////////
+swap 2 numbers without using third-
+
+X= 25 (First number), Y= 23 (second number)
+Swapping Logic:
+X = X + Y = 25 +23 = 48
+Y = X - Y = 48 - 23 = 25
+X = X -Y = 48 - 25 = 23
+and the numbers are swapped as X =23 and Y =25. 
+
+import java.util.*;
+public class Main
+{
+
+public static void main(String[] args) {
+System.out.println("Enter 2 numbers");
+Scanner s= new Scanner(System.in);
+
+ 
+int x= s.nextInt();
+int y=s.nextInt();
+System.out.println("number before swapping " + x +"  "+y);
+x=x+y; //(25+23=48)
+y=x-y; //(48-23=25)
+x=x-y; //(48-25=23)
+
+x=x*y;//2nd approach
+y=x/y;//
+x=x/y;//
+
+3 rd approach xor if both values same output is 1 1=0, 0 0=0,1 0=1,0 1=1 (in binary 23 is 16 8 4 2 1 - 1 0 1 1, and 25 is 1 1 0 1  
+x=x^y;//1 0 1 1 ^ 1 1 0 1= 0 1 1 0 
+y=x^y;//0 1 1 0 ^ 1 1 0 1= 1 0 1 1  = 23
+x=x^y;//0 1 1 0 ^ 1 0 1 1= 1 1 0 1 = 25
+
+System.out.println("number after swapping " + x +"  "+y);
+}
+}
+
+//////////////////////////////////////////////////////////////
+To find given number is possitive or negative-
+
+import java.util.*;
+public class Main
+{
+
+public static void main(String[] args) {
+System.out.println("Enter number");
+Scanner s= new Scanner(System.in);
+int num=s.nextInt();
+if (num>0)
+System.out.println("number is possitive");
+else
+System.out.println("number is negative ");
+}
+}
+
+//////////////////////////////////////////////////////////////
+
+Write a Java Program to find whether given number is Leap year or NOT
+
+Class Leap{
+  public static void main(String[] args) {
+
+    // year to be checked
+    int year = 1996;
+    boolean leap = false;
+
+    // if the year is divided by 4
+    if (year % 4 == 0) {
+
+      // if the year is century
+      if (year % 100 == 0) {
+
+        // if year is divided by 400
+        // then it is a leap year
+        if (year % 400 == 0)
+          leap = true;
+        else
+          leap = false;
+      }
+      
+      // if the year is not century
+      else
+        leap = true;
+    }
+    
+    else
+      leap = false;
+ if (leap)
+      System.out.println(year + " is a leap year.");
+    else
+      System.out.println(year + " is not a leap year.");
+
+}
+}
+
+/////////////////////////////////////////////////////////////////////////
+Write a Java Program to Print 1 To 10 Without Using Loop
+
+package com.devglan.set2;
+
+public class Print {
+
+    public static void printWithoutLoop(int n) {
+        if (n <= 10) {
+            System.out.println(n);
+            printWithoutLoop(n + 1);
+        }
+    }
+
+    public static void main(String[] args){
+        Print.printWithoutLoop(1);
+    }
+}
+
+//////////////////////////////////////////////////////////////////////
+Write a Java Program to print the digits of a Given Number.
+
+Class Digit
+{
+public static void main(String[] args) {
+{
+Scanner s=new Scanner(System.in);
+System.out.print("Enter a number");
+int n=s.nextInt();
+int r;
+while(n>0)
+{
+r=r%10;
+System.out.println(r);
+n=n/10;
+}
+}
+}
+
+/////////////////////////////////////////////////////////////////////////
+Write a Java Program to find the smallest of 3 numbers (a,b,c) without using < or > symbol? 
+
+import java.util.Scanner;  
+public class LargestNumberExample1  
+{  
+public static void main(String[] args)   
+{  
+int a, b, c, smallest, int d=0;  
+//object of the Scanner class  
+Scanner sc = new Scanner(System.in);  
+//reading input from the user  
+System.out.println("Enter the first number:");  
+a = sc.nextInt();  
+System.out.println("Enter the second number:");  
+b = sc.nextInt();  
+System.out.println("Enter the third number:");  
+c = sc.nextInt();  
+if(a!=0 && b!=0 && c!=0)
+{
+a--;
+b--;
+c--;
+d++;
+System.out.println("The largest number is: "+smallest);  
+}  
+}
+
+///////////////////////////////////////////////////////////////////////////////
+18. Write a java program to LCM of TWO given number using Prime Factors method. 
+
+import java.util.Scanner;  
+public class LcmExample4  
+{  
+public static void main(String args[])  
+{  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter the first number: ");         
+int x = sc.nextInt();  
+//reads an integer from the user  
+System.out.print("Enter the second number: ");        
+//reads an integer from the user  
+int y = sc.nextInt();  
+//logic for finding lcm of both numbers  
+int i;  
+//find the largest between two numbers x and y and assigns the large number to the variable a  
+int a =(x > y)? x : y;  
+  
+for(i = a ; i <= x*y ; i = i + a)  
+{  
+//returns true if both conditions are true  
+if(i % x == 0 && i % y == 0)  
+break;  
+}  
+//prints the result  
+System.out.println("LCM of "+x+" and "+y+" is: "+i);  
+}  
+}    
